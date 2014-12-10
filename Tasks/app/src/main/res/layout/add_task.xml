@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="fill_parent" android:id="@+id/container"
+             android:layout_height="fill_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                 xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical">
+        <!-- Title -->
+        <LinearLayout android:gravity="center" android:layout_marginBottom="@dimen/twenty"
+                android:orientation="horizontal" android:layout_width="match_parent"
+                android:layout_height="match_parent" android:layout_marginLeft="@dimen/twenty">
+
+            <EditText android:id="@+id/taskTitleText" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:singleLine="true"
+                    android:layout_marginRight="@dimen/twenty"
+                    android:hint="@string/titleHint"> <requestFocus/> </EditText>
+        </LinearLayout>
+
+        <View android:layout_width="fill_parent" android:layout_marginRight="@dimen/twenty"
+              android:layout_height="@dimen/three" android:layout_marginLeft="@dimen/twenty"
+              android:background="@color/black"/>
+        <!-- Due Date -->
+        <HorizontalScrollView android:layout_width="wrap_content" android:layout_gravity="center"
+                              android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:layout_marginBottom="@dimen/twenty"
+                      android:orientation="horizontal" android:layout_width="match_parent"
+                      android:layout_height="match_parent" android:layout_marginTop="@dimen/twenty">
+            <TextView android:text="Due Date" android:textSize="@dimen/thirty"
+                      android:id="@+id/date" android:layout_marginRight="@dimen/twenty"
+                      android:layout_height="wrap_content" android:layout_width="wrap_content"
+                      android:layout_marginLeft="@dimen/twenty"/>
+
+            <DatePicker android:id="@+id/datepick" android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:calendarViewShown="false"/>
+        </LinearLayout>
+        </HorizontalScrollView>
+
+        <View android:layout_width="fill_parent" android:layout_marginRight="@dimen/twenty"
+              android:layout_height="@dimen/three" android:layout_marginLeft="@dimen/twenty"
+              android:background="@color/black"/>
+        <!-- Note -->
+        <LinearLayout android:gravity="center" android:layout_marginBottom="@dimen/twenty"
+                      android:orientation="horizontal" android:layout_width="match_parent"
+                      android:layout_height="match_parent" android:layout_marginTop="@dimen/twenty">
+            <EditText android:id="@+id/textarea" android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:layout_marginRight="@dimen/twenty"
+                    android:layout_marginLeft="@dimen/twenty" android:hint="@string/noteHint"/>
+        </LinearLayout>
+
+        <View android:layout_width="fill_parent" android:layout_marginRight="@dimen/twenty"
+              android:layout_height="@dimen/three" android:layout_marginLeft="@dimen/twenty"
+              android:background="@color/black"/>
+        <!-- Priority -->
+        <LinearLayout android:gravity="center" android:layout_marginBottom="@dimen/twenty"
+                      android:orientation="horizontal" android:layout_width="match_parent"
+                      android:layout_height="match_parent" android:layout_marginTop="@dimen/twenty">
+            <TextView android:text="Priority" android:textSize="@dimen/thirty"
+                      android:id="@+id/priority"
+                      android:layout_height="wrap_content" android:layout_width="wrap_content"
+                    android:layout_marginRight="@dimen/twenty" android:layout_marginLeft="@dimen/twenty"/>
+
+            <Spinner android:id="@+id/prio_spinner" android:layout_width="match_parent"
+                     android:layout_height="wrap_content" android:layout_marginRight="@dimen/twenty"/>
+        </LinearLayout>
+
+        <View android:layout_width="fill_parent" android:layout_marginRight="@dimen/twenty"
+              android:layout_height="@dimen/three" android:layout_marginLeft="@dimen/twenty"
+              android:background="@color/black"/>
+        <!-- Group -->
+        <LinearLayout android:gravity="center" android:layout_marginBottom="@dimen/twenty"
+                      android:orientation="horizontal" android:layout_width="match_parent"
+                      android:layout_height="match_parent" android:layout_marginTop="@dimen/twenty">
+            <TextView android:text="Group" android:textSize="@dimen/thirty"
+                      android:id="@+id/group" android:layout_gravity="center_vertical"
+                      android:layout_height="wrap_content" android:layout_width="wrap_content"
+                      android:layout_marginRight="@dimen/twenty" android:layout_marginLeft="@dimen/twenty"/>
+
+            <Spinner android:id="@+id/groupSpinner" android:layout_width="match_parent"
+                     android:layout_height="wrap_content" android:layout_marginRight="@dimen/thirty"/>
+        </LinearLayout>
+
+        <View android:layout_width="fill_parent" android:layout_marginRight="@dimen/twenty"
+              android:layout_height="@dimen/three" android:layout_marginLeft="@dimen/twenty"
+              android:background="@color/black"/>
+        <!-- collaborator -->
+        <LinearLayout android:gravity="center" android:layout_marginBottom="@dimen/twenty"
+                      android:orientation="horizontal" android:layout_width="match_parent"
+                      android:layout_height="match_parent" android:layout_marginTop="@dimen/twenty">
+            <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_add_person" android:id="@+id/addColla"
+                android:layout_marginLeft="@dimen/twenty"/>
+
+            <EditText android:layout_width="fill_parent" android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/twenty" android:id="@+id/collaList"
+                    android:singleLine="true"/>
+        </LinearLayout>
+
+        <View android:layout_width="fill_parent" android:layout_marginRight="@dimen/twenty"
+              android:layout_height="@dimen/three" android:layout_marginLeft="@dimen/twenty"
+              android:background="@color/black"/>
+        <!-- Complete status -->
+        <LinearLayout android:gravity="center" android:layout_marginBottom="@dimen/twenty"
+                      android:orientation="horizontal" android:layout_width="match_parent"
+                      android:layout_height="wrap_content" android:layout_marginTop="@dimen/twenty">
+            <TextView android:text="Completed" android:textSize="@dimen/thirty"
+                      android:id="@+id/stt" android:layout_marginRight="@dimen/twenty"
+                      android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+
+            <CheckBox android:id="@+id/completeStt" android:layout_height="wrap_content"
+                      android:layout_width="wrap_content"/>
+        </LinearLayout>
+
+        <View android:layout_width="fill_parent" android:layout_marginRight="@dimen/twenty"
+              android:layout_height="@dimen/three" android:layout_marginLeft="@dimen/twenty"
+              android:background="@color/black"/>
+        <!-- Add task -->
+        <Button android:id="@+id/taskOkButton" android:layout_width="wrap_content"
+                android:layout_gravity="center" android:text="Add"
+                android:layout_height="wrap_content" android:layout_marginTop="@dimen/twenty"
+                android:layout_marginBottom="@dimen/twenty"/>
+    </LinearLayout>
+</ScrollView>

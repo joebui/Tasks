@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="twenty"> 20px </dimen>
+    <dimen name="thirty"> 30px </dimen>
+    <dimen name="three"> 3px </dimen>
+    <dimen name="fifty"> 50px </dimen>
+    <dimen name="ten"> 10px </dimen>
+</resources>
