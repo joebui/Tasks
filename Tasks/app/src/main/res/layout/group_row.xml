@@ -13,6 +13,6 @@
 
         <TextView android:layout_width="match_parent" android:id="@+id/row"
                   android:layout_height="match_parent" android:textSize="40px"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center" android:textColor="@color/black"/>
     </LinearLayout>
 </LinearLayout>
